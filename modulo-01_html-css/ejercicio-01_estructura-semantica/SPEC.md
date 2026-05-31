@@ -19,10 +19,10 @@ Trabajás en una pequeña agencia de diseño. Tu primer tarea es construir la es
 
 ### Criterios de aceptación obligatorios
 
-- [ ] **REQ-1.1.1** La página tiene una estructura HTML5 válida (`<!DOCTYPE html>`, `<html lang="es">`, `<head>`, `<body>`)
-- [ ] **REQ-1.1.2** El `<head>` incluye: `charset` UTF-8, `viewport` meta tag, `<title>` descriptivo, y al menos un `<meta name="description">`
-- [ ] **REQ-1.1.3** Existe exactamente un `<header>` de página que contiene: logo (imagen con `alt` descriptivo) y una navegación (`<nav>`) con al menos 4 enlaces (`<a>`)
-- [ ] **REQ-1.1.4** El contenido principal está dentro de `<main>`
+- [✅] **REQ-1.1.1** La página tiene una estructura HTML5 válida (`<!DOCTYPE html>`, `<html lang="es">`, `<head>`, `<body>`)
+- [✅] **REQ-1.1.2** El `<head>` incluye: `charset` UTF-8, `viewport` meta tag, `<title>` descriptivo, y al menos un `<meta name="description">`
+- [✅] **REQ-1.1.3** Existe exactamente un `<header>` de página que contiene: logo (imagen con `alt` descriptivo) y una navegación (`<nav>`) con al menos 4 enlaces (`<a>`)
+- [✅] **REQ-1.1.4** El contenido principal está dentro de `<main>`
 - [ ] **REQ-1.1.5** Dentro de `<main>`, el artículo está envuelto en `<article>`
 - [ ] **REQ-1.1.6** El artículo tiene: `<header>` interno con `<h1>` y metadatos del artículo (fecha en `<time datetime="...">`, autor, categoría), al menos 3 secciones (`<section>`) con sus títulos (`<h2>`), y al menos un `<aside>` con contenido relacionado
 - [ ] **REQ-1.1.7** Existe al menos una lista `<ul>` o `<ol>` con 3+ ítems en el contenido del artículo
