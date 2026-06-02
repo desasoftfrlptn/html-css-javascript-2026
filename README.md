@@ -7,9 +7,9 @@
 
 | Campo | Dato |
 |-------|------|
-| **Nombre y Apellido** | |
-| **Legajo** | |
-| **Correo electrónico** | |
+| **Nombre y Apellido** | Luca De Paola|
+| **Legajo** | 31077|
+| **Correo electrónico** | ludepa3110@gmail.com|
 
 ---
 
