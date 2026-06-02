@@ -7,9 +7,9 @@
 
 | Campo | Dato |
 |-------|------|
-| **Nombre y Apellido** | |
-| **Legajo** | |
-| **Correo electrónico** | |
+| **Nombre y Apellido** | Dolores Goñi |
+| **Legajo** | 32268 |
+| **Correo electrónico** | lolagoni2004@gmail.com |
 
 ---
 
