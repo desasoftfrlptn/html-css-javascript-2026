@@ -7,9 +7,9 @@
 
 | Campo | Dato |
 |-------|------|
-| **Nombre y Apellido** | |
-| **Legajo** | |
-| **Correo electrónico** | |
+| **Nombre y Apellido** |Francisco Buscaglia |
+| **Legajo** |32308|
+| **Correo electrónico** |franbuscag@gmail.com |
 
 ---
 
