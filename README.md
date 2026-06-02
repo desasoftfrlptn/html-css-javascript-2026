@@ -7,9 +7,9 @@
 
 | Campo | Dato |
 |-------|------|
-| **Nombre y Apellido** | |
-| **Legajo** | |
-| **Correo electrónico** | |
+| **Nombre y Apellido** | Geronimo Garrote |
+| **Legajo** | 33277 | 
+| **Correo electrónico** | garrote.gero@mgmail.com |
 
 ---
 
