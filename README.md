@@ -128,17 +128,6 @@ Cada ejercicio tiene un archivo `REFLEXION.md` obligatorio donde debés:
 
 Leé `CODIGO_DE_HONOR.md` antes de comenzar.
 
----
-
-## 🗓️ Fechas importantes
-
-| Hito | Fecha |
-|------|-------|
-| Fork del repositorio | Semana 1 |
-| Entrega Módulo 1 (PR) | Semana 5 |
-| Defensa parcial Módulo 1 | Semana 6 |
-| Entrega Módulo 2 (PR) | Semana 10 |
-| Defensa final | Semana 11 |
 
 ---
 
