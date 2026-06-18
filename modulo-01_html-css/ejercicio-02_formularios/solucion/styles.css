@@ -1,0 +1,47 @@
+/* ===== Base ===== */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* ===== Inputs base ===== */
+input, textarea, select {
+    display: block;
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+}
+
+/* ===== Hover ===== */
+input:hover, textarea:hover, select:hover {
+    border-color: #666;
+}
+
+/* ===== Focus visible (WCAG obligatorio) ===== */
+input:focus, textarea:focus, select:focus {
+    border-color: #0066ff;
+    outline: 3px solid #99c2ff;
+}
+
+/* ===== Valid ===== */
+input:valid, textarea:valid, select:valid {
+    border-color: green;
+}
+
+/* ===== Invalid ===== */
+input:invalid, textarea:invalid, select:invalid {
+    border-color: red;
+}
+
+/* ===== Disabled ===== */
+input:disabled, textarea:disabled, select:disabled {
+    background: #eee;
+    cursor: not-allowed;
+}
+
+/* ===== Error message ===== */
+.error-message {
+    color: red;
+    font-size: 12px;
+}
