@@ -25,26 +25,26 @@ La página debe incluir:
 │  LOGO          Nav: Inicio Contacto ... │  ← Header (reutilizá lo del ej 1.1)
 ├─────────────────────────────────────────┤
 │                                         │
-│          Contáctanos                     │
+│          Contáctanos                    │
 │          Dejanos tu mensaje             │
 │                                         │
 │  ┌─────────────────────────────────┐    │
 │  │ Nombre:  [________________]     │    │  ← Input de texto
 │  │ Email:   [________________]     │    │  ← Input email con validación
 │  │ Teléfono:[________________]     │    │  ← Input tel (opcional)
-│  │                                   │    │
-│  │ Motivo:  [▼ Seleccioná...   ]    │    │  ← Select
-│  │                                   │    │
-│  │ Mensaje:                          │    │
-│  │ ┌───────────────────────────┐    │    │  ← Textarea
-│  │ │                           │    │    │
-│  │ └───────────────────────────┘    │    │
-│  │                                   │    │
-│  │ ☑️ Acepto los términos           │    │  ← Checkbox
-│  │                                   │    │
-│  │ [○] Consulta  [○] Sugerencia     │    │  ← Radio buttons
-│  │                                   │    │
-│  │        [ Enviar ]                │    │  ← Botón submit
+│  │                                 │    │
+│  │ Motivo:  [▼ Seleccioná...   ]   │    │  ← Select
+│  │                                 │    │
+│  │ Mensaje:                        │    │
+│  │ ┌───────────────────────────┐   │    │  ← Textarea
+│  │ │                           │   │    │
+│  │ └───────────────────────────┘   │    │
+│  │                                 │    │
+│  │ ☑️ Acepto los términos          │    │  ← Checkbox
+│  │                                 │    │
+│  │ [○] Consulta  [○] Sugerencia    │    │  ← Radio buttons
+│  │                                 │    │
+│  │        [ Enviar ]               │    │  ← Botón submit
 │  └─────────────────────────────────┘    │
 │                                         │
 ├─────────────────────────────────────────┤
