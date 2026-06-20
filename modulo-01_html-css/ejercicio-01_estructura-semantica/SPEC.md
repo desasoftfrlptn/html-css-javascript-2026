@@ -19,22 +19,22 @@ Trabajás en una pequeña agencia de diseño. Tu primer tarea es construir la es
 
 ### Criterios de aceptación obligatorios
 
-- [ ] **REQ-1.1.1** La página tiene una estructura HTML5 válida (`<!DOCTYPE html>`, `<html lang="es">`, `<head>`, `<body>`)
-- [ ] **REQ-1.1.2** El `<head>` incluye: `charset` UTF-8, `viewport` meta tag, `<title>` descriptivo, y al menos un `<meta name="description">`
-- [ ] **REQ-1.1.3** Existe exactamente un `<header>` de página que contiene: logo (imagen con `alt` descriptivo) y una navegación (`<nav>`) con al menos 4 enlaces (`<a>`)
-- [ ] **REQ-1.1.4** El contenido principal está dentro de `<main>`
-- [ ] **REQ-1.1.5** Dentro de `<main>`, el artículo está envuelto en `<article>`
-- [ ] **REQ-1.1.6** El artículo tiene: `<header>` interno con `<h1>` y metadatos del artículo (fecha en `<time datetime="...">`, autor, categoría), al menos 3 secciones (`<section>`) con sus títulos (`<h2>`), y al menos un `<aside>` con contenido relacionado
-- [ ] **REQ-1.1.7** Existe al menos una lista `<ul>` o `<ol>` con 3+ ítems en el contenido del artículo
-- [ ] **REQ-1.1.8** El artículo incluye al menos una imagen con `alt` descriptivo y un `<figure>` con `<figcaption>`
-- [ ] **REQ-1.1.9** La página tiene un `<footer>` con información de copyright y enlaces secundarios
-- [ ] **REQ-1.1.10** El HTML pasa el validador de W3C sin errores
+- [✅] **REQ-1.1.1** La página tiene una estructura HTML5 válida (`<!DOCTYPE html>`, `<html lang="es">`, `<head>`, `<body>`)
+- [✅] **REQ-1.1.2** El `<head>` incluye: `charset` UTF-8, `viewport` meta tag, `<title>` descriptivo, y al menos un `<meta name="description">`
+- [✅] **REQ-1.1.3** Existe exactamente un `<header>` de página que contiene: logo (imagen con `alt` descriptivo) y una navegación (`<nav>`) con al menos 4 enlaces (`<a>`)
+- [✅] **REQ-1.1.4** El contenido principal está dentro de `<main>`
+- [✅] **REQ-1.1.5** Dentro de `<main>`, el artículo está envuelto en `<article>`
+- [✅] **REQ-1.1.6** El artículo tiene: `<header>` interno con `<h1>` y metadatos del artículo (fecha en `<time datetime="...">`, autor, categoría), al menos 3 secciones (`<section>`) con sus títulos (`<h2>`), y al menos un `<aside>` con contenido relacionado
+- [✅] **REQ-1.1.7** Existe al menos una lista `<ul>` o `<ol>` con 3+ ítems en el contenido del artículo
+- [✅] **REQ-1.1.8** El artículo incluye al menos una imagen con `alt` descriptivo y un `<figure>` con `<figcaption>`
+- [✅] **REQ-1.1.9** La página tiene un `<footer>` con información de copyright y enlaces secundarios
+- [✅] **REQ-1.1.10** El HTML pasa el validador de W3C sin errores
 
 ### Criterios opcionales (bonus)
 
-- [ ] **REQ-1.1.B1** Incluir un `<blockquote cite="URL">` con una cita relevante
-- [ ] **REQ-1.1.B2** Agregar una sección de comentarios usando `<section>` y `<address>` para cada comentarista
-- [ ] **REQ-1.1.B3** Incluir metadatos Open Graph (`og:title`, `og:description`, `og:image`) en el `<head>`
+- [✅] **REQ-1.1.B1** Incluir un `<blockquote cite="URL">` con una cita relevante
+- [✅] **REQ-1.1.B2** Agregar una sección de comentarios usando `<section>` y `<address>` para cada comentarista
+- [✅] **REQ-1.1.B3** Incluir metadatos Open Graph (`og:title`, `og:description`, `og:image`) en el `<head>`
 
 ---
 

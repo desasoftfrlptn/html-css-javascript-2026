@@ -7,9 +7,9 @@
 
 | Campo | Dato |
 |-------|------|
-| **Nombre y Apellido** | |
-| **Legajo** | |
-| **Correo electrónico** | |
+| **Nombre y Apellido** | **Mascena Enzo Mario**|
+| **Legajo** | **33608**|
+| **Correo electrónico** | **enzomariomascena@gmail.com** |
 
 ---
 

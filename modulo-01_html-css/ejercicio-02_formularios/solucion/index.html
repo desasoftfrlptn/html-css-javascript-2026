@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto Accesible - Agencia de Diseño</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo" role="img" aria-label="Agencia Diseño Logo">AgenciaDiseño</div>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#" aria-current="page">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Contáctanos</h1>
+        <p>Dejanos tu mensaje. Los campos marcados con asterisco (<span class="required-indicator" aria-hidden="true">*</span>) son obligatorios.</p>
+
+        <form action="/enviar-contacto" method="POST">
+            
+            <fieldset>
+                <legend>Datos Personales</legend>
+
+                <div class="form-group">
+                    <label for="nombre">Nombre <span class="required-indicator" aria-hidden="true">*</span></label>
+                    <input type="text" id="nombre" name="nombre" required aria-required="true" autocomplete="name">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email <span class="required-indicator" aria-hidden="true">*</span></label>
+                    <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" required aria-required="true" aria-describedby="email-error" autocomplete="email">
+                    <span class="error-message" id="email-error" aria-live="polite">Por favor, ingresá un correo electrónico válido.</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" name="telefono" pattern="[0-9]{9,15}" placeholder="Ej: 1123456789" aria-describedby="tel-note" autocomplete="tel">
+                    <span class="field-note" id="tel-note">Solo números, entre 9 y 15 dígitos.</span>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Detalles del Mensaje</legend>
+
+                <div class="form-group">
+                    <label for="motivo-busqueda">Motivo de contacto <span class="required-indicator" aria-hidden="true">*</span></label>
+                    <input type="text" id="motivo-busqueda" name="motivo" list="motivos-list" placeholder="Escribí o seleccioná..." required aria-required="true">
+                    <datalist id="motivos-list">
+                        <option value="Presupuesto">
+                        <option value="Soporte Técnico">
+                        <option value="Sugerencia Comercial">
+                        <option value="Trabajá con nosotros">
+                        <option value="Otros">
+                    </datalist>
+                </div>
+
+                <div class="form-group">
+                    <span class="label-simulated" id="tipo-contacto-label">Tipo de consulta <span class="required-indicator" aria-hidden="true">*</span></span>
+                    <div role="radiogroup" aria-labelledby="tipo-contacto-label" class="radio-group">
+                        <label>
+                            <input type="radio" name="tipo_mensaje" value="consulta" required> Consulta
+                        </label>
+                        <label>
+                            <input type="radio" name="tipo_mensaje" value="sugerencia"> Sugerencia
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="mensaje">Mensaje <span class="required-indicator" aria-hidden="true">*</span></label>
+                    <textarea id="mensaje" name="mensaje" rows="5" required aria-required="true"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="adjunto">Adjuntar documentación (Opcional)</label>
+                    <input type="file" id="adjunto" name="adjunto" aria-label="Subir archivo adjunto" accept=".pdf,.doc,.docx,.jpg,.png">
+                    <span class="field-note" id="file-note">Formatos permitidos: PDF, DOC, JPG, PNG (Máx. 5MB).</span>
+                </div>
+            </fieldset>
+
+            <div class="form-group checkbox-group">
+                <label for="terminos">
+                    <input type="checkbox" id="terminos" name="terminos" value="aceptado" required aria-required="true">
+                    Acepto los términos y condiciones <span class="required-indicator" aria-hidden="true">*</span>
+                </label>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit">Enviar</button>
+            </div>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Agencia de Diseño. Todos los derechos reservados.</p>
+    </footer>
+
+<!-- La diferencia entre aria-required y required es: "required" es un atributo HTML5 nativo que activa la validación del navegador e impide el envío del formulario si el campo está vacío; "aria-required" es un atributo ARIA que comunica la obligatoriedad del campo a los lectores de pantalla sin afectar la validación nativa. Se usan juntos para cubrir tanto la validación funcional como la accesibilidad. -->
+    </body>
+</html>
