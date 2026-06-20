@@ -1,0 +1,134 @@
+/* TP-CHECK: 1.2 | MASCENA-ENZO-MARIO | un label explícito con for es importante porque: vincula el texto al input para lectores de pantalla y amplía la zona de clic para usuarios con dificultades motrices. */
+
+/* Estilos Generales de Layout */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+main {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+fieldset {
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+}
+
+legend {
+    font-weight: bold;
+    padding: 0 10px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label, .label-simulated {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.required-indicator {
+    color: #d93025;
+}
+
+/* Estilos de Inputs Básicos */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    padding: 10px;
+    border: 1px solid #767676;
+    border-radius: 4px;
+    font-size: 1rem;
+    background-color: #fff;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+/* REQ-1.2.9 & REQ-1.2.10: Estados Visuales y Accesibilidad de Foco (WCAG 2.4.7) */
+
+/* Hover */
+input:hover, select:hover, textarea:hover {
+    border-color: #000;
+}
+
+/* Focus Visible: Outline contrastante muy claro */
+input:focus-visible, 
+select:focus-visible, 
+textarea:focus-visible,
+button:focus-visible {
+    outline: 3px solid #0b57d0;
+    outline-offset: 2px;
+}
+
+/* Deshabilitado */
+input:disabled, select:disabled, textarea:disabled {
+    background-color: #e0e0e0;
+    color: #767676;
+    cursor: not-allowed;
+}
+
+/* REQ-1.2.8: Feedback visual con validación HTML5 nativa al interactuar */
+/* Usamos :user-invalid para que no aparezca en rojo apenas carga la página, sino cuando el usuario interactúa */
+input:user-invalid, 
+select:user-invalid, 
+textarea:user-invalid {
+    border-color: #b3261e;
+    background-color: #fdf2f2;
+}
+
+input:user-valid, 
+select:user-valid, 
+textarea:user-valid {
+    border-color: #137333;
+    background-color: #f1f8f5;
+}
+
+/* REQ-1.2.11: Mensajes de error */
+.error-message {
+    color: #b3261e;
+    font-size: 0.875rem;
+    margin-top: 5px;
+    display: none; /* Se oculta por defecto */
+}
+
+/* Si el input es inválido, mostramos el mensaje hermano .error-message */
+input:user-invalid ~ .error-message {
+    display: block;
+}
+
+.field-note {
+    font-size: 0.825rem;
+    color: #5f6368;
+    margin-top: 4px;
+}
+
+/* Botón de Envío */
+button[type="submit"] {
+    background-color: #0b57d0;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #0045b5;
+}
