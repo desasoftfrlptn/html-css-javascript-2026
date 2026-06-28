@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestros Proyectos — Agencia de Diseño</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- REQ-1.3.1 / REQ-1.3.2: header con flexbox y sticky -->
+    <header class="header">
+        <a href="#" class="logo">Estudio<span>.</span></a>
+        <!-- REQ-1.3.3: nav con flexbox y gap entre los enlaces -->
+        <nav class="nav">
+            <a href="#inicio">Inicio</a>
+            <a href="#proyectos">Proyectos</a>
+            <a href="#nosotros">Nosotros</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero -->
+        <section class="hero" id="proyectos">
+            <h1>Nuestros Proyectos</h1>
+            <p>Una selección del trabajo que hicimos para clientes de distintos rubros.</p>
+        </section>
+
+        <!-- REQ-1.3.4 / REQ-1.3.5: barra de filtros centrada con flexbox (solo visual) -->
+        <div class="filtros">
+            <button class="filtro activo">Todos</button>
+            <button class="filtro">Web</button>
+            <button class="filtro">Mobile</button>
+            <button class="filtro">Branding</button>
+        </div>
+
+        <!-- REQ-1.3.6: contenedor flex con flex-wrap y gap -->
+        <section class="galeria">
+
+            <!-- REQ-1.3.B3: featured card a ancho completo de la primera fila -->
+            <article class="card card--featured">
+                <div class="card__img" style="background-image: url('https://picsum.photos/seed/featured/800/400');"></div>
+                <div class="card__body">
+                    <h2 class="card__titulo">Rediseño de Marca — Nubia Café</h2>
+                    <p class="card__desc">Proyecto destacado: identidad visual completa, packaging y sitio web para una cadena de cafeterías de especialidad.</p>
+                    <ul class="tags">
+                        <li>Branding</li>
+                        <li>Web</li>
+                        <li>Packaging</li>
+                    </ul>
+                    <a href="#" class="btn-vermas">Ver más →</a>
+                </div>
+            </article>
+
+            <!-- REQ-1.3.9: mínimo 6 tarjetas con contenido distinto -->
+            <article class="card">
+                <div class="card__img" style="background-image: url('https://picsum.photos/seed/p1/400/300');"></div>
+                <div class="card__body">
+                    <h2 class="card__titulo">Landing Page — FitTrack</h2>
+                    <p class="card__desc">Página de aterrizaje para una app de seguimiento de entrenamientos.</p>
+                    <ul class="tags">
+                        <li>Web</li>
+                        <li>UI</li>
+                    </ul>
+                    <a href="#" class="btn-vermas">Ver más →</a>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card__img" style="background-image: url('https://picsum.photos/seed/p2/400/300');"></div>
+                <div class="card__body">
+                    <h2 class="card__titulo">App Mobile — Sereno</h2>
+                    <p class="card__desc">Diseño de una aplicación de meditación con interfaz minimalista.</p>
+                    <ul class="tags">
+                        <li>Mobile</li>
+                        <li>UX</li>
+                    </ul>
+                    <a href="#" class="btn-vermas">Ver más →</a>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card__img" style="background-image: url('https://picsum.photos/seed/p3/400/300');"></div>
+                <div class="card__body">
+                    <h2 class="card__titulo">Identidad — Estudio Norte</h2>
+                    <p class="card__desc">Logo, paleta y manual de marca para un estudio de arquitectura.</p>
+                    <ul class="tags">
+                        <li>Branding</li>
+                        <li>Print</li>
+                    </ul>
+                    <a href="#" class="btn-vermas">Ver más →</a>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card__img" style="background-image: url('https://picsum.photos/seed/p4/400/300');"></div>
+                <div class="card__body">
+                    <h2 class="card__titulo">E-commerce — La Botica</h2>
+                    <p class="card__desc">Tienda online de productos naturales con carrito y checkout propios.</p>
+                    <ul class="tags">
+                        <li>Web</li>
+                        <li>E-commerce</li>
+                    </ul>
+                    <a href="#" class="btn-vermas">Ver más →</a>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card__img" style="background-image: url('https://picsum.photos/seed/p5/400/300');"></div>
+                <div class="card__body">
+                    <h2 class="card__titulo">App Mobile — RutaBus</h2>
+                    <p class="card__desc">Diseño de la interfaz de una app de transporte público en tiempo real.</p>
+                    <ul class="tags">
+                        <li>Mobile</li>
+                        <li>UI</li>
+                    </ul>
+                    <a href="#" class="btn-vermas">Ver más →</a>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card__img" style="background-image: url('https://picsum.photos/seed/p6/400/300');"></div>
+                <div class="card__body">
+                    <h2 class="card__titulo">Dashboard — Métrika</h2>
+                    <p class="card__desc">Panel de analítica web con gráficos y tableros personalizables.</p>
+                    <ul class="tags">
+                        <li>Web</li>
+                        <li>Dashboard</li>
+                    </ul>
+                    <a href="#" class="btn-vermas">Ver más →</a>
+                </div>
+            </article>
+
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 Estudio. Hecho con Flexbox y sin librerías externas.</p>
+        <nav class="footer__nav">
+            <a href="#">Instagram</a>
+            <a href="#">Behance</a>
+            <a href="#">LinkedIn</a>
+        </nav>
+    </footer>
+
+</body>
+</html>

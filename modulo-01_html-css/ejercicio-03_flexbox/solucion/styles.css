@@ -1,0 +1,297 @@
+/* TP-CHECK: 1.3 | MASCENA-ENZO-MARIO | flex-wrap hace: permite que los items de un contenedor flex pasen a una nueva línea cuando no entran en el ancho disponible, en vez de achicarse o desbordar en una sola fila. */
+
+/* REQ-1.3.11: sistema de colores con variables CSS */
+:root {
+    --color-primario: #6c3df0;
+    --color-fondo: #f4f3f8;
+    --color-texto: #1f1d2b;
+    --color-tarjeta: #ffffff;
+    --color-borde: #e2e0ec;
+    --sombra: 0 4px 12px rgba(31, 29, 43, 0.08);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+}
+
+/* ===== HEADER ===== */
+/* REQ-1.3.1: flexbox con logo y nav en extremos opuestos */
+/* REQ-1.3.2: sticky para que quede arriba al hacer scroll */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 40px;
+    background-color: var(--color-tarjeta);
+    box-shadow: var(--sombra);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--color-texto);
+}
+
+.logo span {
+    color: var(--color-primario);
+}
+
+/* REQ-1.3.3: nav con flexbox y gap entre enlaces */
+.nav {
+    display: flex;
+    gap: 28px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: var(--color-texto);
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.nav a:hover {
+    color: var(--color-primario);
+}
+
+/* ===== HERO ===== */
+.hero {
+    text-align: center;
+    padding: 60px 20px 40px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin: 0 0 10px;
+}
+
+.hero p {
+    color: #5f5c70;
+    margin: 0;
+}
+
+/* ===== FILTROS ===== */
+/* REQ-1.3.4: fila de botones centrada con flexbox */
+.filtros {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 40px;
+    padding: 0 20px;
+}
+
+.filtro {
+    padding: 8px 20px;
+    border: 1px solid var(--color-borde);
+    border-radius: 999px;
+    background-color: var(--color-tarjeta);
+    color: var(--color-texto);
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+}
+
+/* REQ-1.3.5: estados visuales del filtro */
+.filtro:hover {
+    border-color: var(--color-primario);
+    color: var(--color-primario);
+}
+
+.filtro.activo {
+    background-color: var(--color-primario);
+    border-color: var(--color-primario);
+    color: #fff;
+}
+
+.filtro:focus-visible {
+    outline: 3px solid var(--color-primario);
+    outline-offset: 2px;
+}
+
+/* ===== GALERÍA ===== */
+/* REQ-1.3.6: contenedor flex con wrap y gap uniforme */
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 40px 60px;
+}
+
+/* REQ-1.3.7: cada tarjeta ocupa ~1/3 del ancho (descontando los 2 gaps) */
+/* REQ-1.3.8: contenido en columna para empujar el CTA al fondo */
+.card {
+    flex: 0 0 calc((100% - 48px) / 3);
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-tarjeta);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--sombra);
+    transition: transform 0.2s, box-shadow 0.2s;
+    /* REQ-1.3.B2: animación de entrada */
+    animation: aparecer 0.5s ease both;
+}
+
+/* REQ-1.3.12: efecto de elevación al hacer hover */
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(31, 29, 43, 0.15);
+}
+
+.card__img {
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+    background-color: var(--color-borde);
+}
+
+.card__body {
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* ocupa el alto restante para que margin-top:auto funcione */
+    padding: 20px;
+}
+
+.card__titulo {
+    font-size: 1.15rem;
+    margin: 0 0 8px;
+}
+
+.card__desc {
+    color: #5f5c70;
+    font-size: 0.95rem;
+    margin: 0 0 14px;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 16px;
+}
+
+.tags li {
+    background-color: var(--color-fondo);
+    color: var(--color-primario);
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 999px;
+}
+
+/* REQ-1.3.8: margin-top:auto pega el botón al fondo de la tarjeta */
+.btn-vermas {
+    margin-top: auto;
+    align-self: flex-start;
+    text-decoration: none;
+    color: var(--color-primario);
+    font-weight: 600;
+    transition: gap 0.2s;
+}
+
+.btn-vermas:hover {
+    text-decoration: underline;
+}
+
+/* REQ-1.3.B3: featured card a ancho completo de la primera fila */
+.card--featured {
+    flex: 0 0 100%;
+    flex-direction: row;
+}
+
+.card--featured .card__img {
+    flex: 0 0 50%;
+    height: auto;
+    min-height: 280px;
+}
+
+.card--featured .card__body {
+    justify-content: center;
+}
+
+.card--featured .card__titulo {
+    font-size: 1.6rem;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 24px 40px;
+    background-color: var(--color-texto);
+    color: #fff;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.footer__nav {
+    display: flex;
+    gap: 20px;
+}
+
+.footer__nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.footer__nav a:hover {
+    text-decoration: underline;
+}
+
+/* REQ-1.3.B2: keyframes de entrada de las tarjetas */
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive simple: en pantallas chicas las tarjetas ocupan todo el ancho */
+@media (max-width: 800px) {
+    .card,
+    .card--featured {
+        flex: 0 0 100%;
+    }
+
+    .card--featured {
+        flex-direction: column;
+    }
+
+    .card--featured .card__img {
+        flex: none;
+        min-height: 200px;
+    }
+
+    .header {
+        flex-direction: column;
+        gap: 12px;
+        padding: 16px 20px;
+    }
+}
