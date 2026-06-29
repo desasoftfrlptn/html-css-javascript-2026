@@ -54,40 +54,40 @@ La agencia consiguió un cliente editorial que quiere un **magazine digital** co
 
 **Layout general con Grid**
 
-- [ ] **REQ-1.4.1** El layout general de la página usa `display: grid` en el `<body>` o contenedor principal, con `grid-template-areas` nombrando las regiones: `header`, `main-content`, `sidebar`, `quote`, `cards`, `footer`
-- [ ] **REQ-1.4.2** El `header` usa Flexbox (está bien mezclar — Grid para macro-layout, Flexbox para micro-layout), sticky como en el ejercicio 1.3
+- [x] **REQ-1.4.1** El layout general de la página usa `display: grid` en el `<body>` o contenedor principal, con `grid-template-areas` nombrando las regiones: `header`, `main-content`, `sidebar`, `quote`, `cards`, `footer`
+- [x] **REQ-1.4.2** El `header` usa Flexbox (está bien mezclar — Grid para macro-layout, Flexbox para micro-layout), sticky como en el ejercicio 1.3
 
 **Grid principal (artículo + sidebar)**
 
-- [ ] **REQ-1.4.3** El contenido principal (`<article>`) y la barra lateral (`<aside>`) están en un grid de 2 columnas usando `grid-template-columns: 2fr 1fr` (el artículo ocupa el doble que la sidebar)
-- [ ] **REQ-1.4.4** El artículo principal ocupa 2 filas de altura con `grid-row: span 2` (o usando áreas explícitas)
-- [ ] **REQ-1.4.5** El `gap` entre filas y columnas es uniforme usando `gap` (no margin en los hijos)
+- [x] **REQ-1.4.3** El contenido principal (`<article>`) y la barra lateral (`<aside>`) están en un grid de 2 columnas usando `grid-template-columns: 2fr 1fr` (el artículo ocupa el doble que la sidebar)
+- [x] **REQ-1.4.4** El artículo principal ocupa 2 filas de altura con `grid-row: span 2` (o usando áreas explícitas)
+- [x] **REQ-1.4.5** El `gap` entre filas y columnas es uniforme usando `gap` (no margin en los hijos)
 
 **Pull quote (cita destacada)**
 
-- [ ] **REQ-1.4.6** La cita destacada ocupa el ancho completo, rompiendo las 2 columnas — implementado con `grid-column: 1 / -1` o asignándola a un área que cruce todo el ancho
+- [x] **REQ-1.4.6** La cita destacada ocupa el ancho completo, rompiendo las 2 columnas — implementado con `grid-column: 1 / -1` o asignándola a un área que cruce todo el ancho
 
 **Galería de tarjetas con auto-fit**
 
-- [ ] **REQ-1.4.7** Las tarjetas de artículos secundarios están en un grid usando `grid-template-columns: repeat(auto-fit, minmax(250px, 1fr))` — esto hace que las tarjetas se adapten automáticamente al ancho disponible SIN media queries
-- [ ] **REQ-1.4.8** Hay mínimo 6 tarjetas con contenido diferente
-- [ ] **REQ-1.4.9** Cada tarjeta tiene: imagen, título, fecha, categoría/tag, extracto de texto, y enlace "Leer más"
+- [x] **REQ-1.4.7** Las tarjetas de artículos secundarios están en un grid usando `grid-template-columns: repeat(auto-fit, minmax(250px, 1fr))` — esto hace que las tarjetas se adapten automáticamente al ancho disponible SIN media queries
+- [x] **REQ-1.4.8** Hay mínimo 6 tarjetas con contenido diferente
+- [x] **REQ-1.4.9** Cada tarjeta tiene: imagen, título, fecha, categoría/tag, extracto de texto, y enlace "Leer más"
 
 **Uso de grid features**
 
-- [ ] **REQ-1.4.10** Hay al menos un caso donde un elemento ocupa un área más grande que una celda usando `grid-column` o `grid-row` con span (además del artículo principal)
-- [ ] **REQ-1.4.11** El orden visual de los elementos NO depende del orden en el HTML — usá `order` de grid o la posición por áreas para demostrar que grid separa el orden visual del markup
+- [x] **REQ-1.4.10** Hay al menos un caso donde un elemento ocupa un área más grande que una celda usando `grid-column` o `grid-row` con span (además del artículo principal)
+- [x] **REQ-1.4.11** El orden visual de los elementos NO depende del orden en el HTML — usá `order` de grid o la posición por áreas para demostrar que grid separa el orden visual del markup
 
 **Estilo general**
 
-- [ ] **REQ-1.4.12** La página tiene un sistema de colores coherente con al menos 3 variables CSS (como en el ejercicio 1.3)
-- [ ] **REQ-1.4.13** La sidebar incluye: lista de artículos recientes, un formulario de newsletter chico (email + botón), y enlaces a redes sociales
+- [x] **REQ-1.4.12** La página tiene un sistema de colores coherente con al menos 3 variables CSS (como en el ejercicio 1.3)
+- [x] **REQ-1.4.13** La sidebar incluye: lista de artículos recientes, un formulario de newsletter chico (email + botón), y enlaces a redes sociales
 
 ### Criterios opcionales (bonus)
 
 - [ ] **REQ-1.4.B1** Implementar un layout de "masonry" aproximado usando `grid-template-rows: masonry` (verificar soporte en navegador) o una alternativa con filas explícitas de diferentes alturas
-- [ ] **REQ-1.4.B2** Usar `grid-auto-flow: dense` para llenar espacios vacíos automáticamente en la galería de tarjetas
-- [ ] **REQ-1.4.B3** Implementar un "featured card" que ocupe 2 columnas en la grilla de tarjetas
+- [x] **REQ-1.4.B2** Usar `grid-auto-flow: dense` para llenar espacios vacíos automáticamente en la galería de tarjetas
+- [x] **REQ-1.4.B3** Implementar un "featured card" que ocupe 2 columnas en la grilla de tarjetas
 
 ---
 
