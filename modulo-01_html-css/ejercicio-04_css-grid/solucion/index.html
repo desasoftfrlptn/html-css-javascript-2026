@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revista Norte — Magazine Digital</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<!-- REQ-1.4.1: el body es el grid principal con grid-template-areas -->
+<body>
+
+    <!-- REQ-1.4.2: header con Flexbox (micro-layout) y sticky -->
+    <header class="header">
+        <a href="#" class="logo">Revista<span>Norte</span></a>
+        <nav class="nav">
+            <a href="#inicio">Inicio</a>
+            <a href="#magazine">Magazine</a>
+            <a href="#cultura">Cultura</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <!-- REQ-1.4.11: en el HTML el aside viene ANTES que el article, pero por
+         grid-template-areas el article se muestra a la izquierda. El orden
+         visual no depende del orden del markup. -->
+    <aside class="sidebar">
+        <section class="widget">
+            <h3>Artículos recientes</h3>
+            <ul class="recientes">
+                <li><a href="#">El regreso del cine analógico</a></li>
+                <li><a href="#">Diez plazas para perderse en la ciudad</a></li>
+                <li><a href="#">Entrevista: la nueva escena del jazz local</a></li>
+                <li><a href="#">Guía de librerías independientes</a></li>
+            </ul>
+        </section>
+
+        <section class="widget">
+            <h3>Newsletter</h3>
+            <p class="widget__texto">Recibí lo mejor de la semana en tu correo.</p>
+            <form class="newsletter">
+                <label for="email" class="sr-only">Email</label>
+                <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+                <button type="submit">Suscribirme</button>
+            </form>
+        </section>
+
+        <section class="widget">
+            <h3>Seguinos</h3>
+            <ul class="redes">
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Twitter / X</a></li>
+                <li><a href="#">YouTube</a></li>
+            </ul>
+        </section>
+    </aside>
+
+    <!-- REQ-1.4.3 / REQ-1.4.4: artículo principal, ocupa 2 filas de alto -->
+    <article class="main-content">
+        <span class="categoria">Portada</span>
+        <h1>La ciudad que no duerme: una semana en la vida nocturna del Norte</h1>
+        <p class="meta">Por Enzo Mascena · 28 de junio de 2026</p>
+        <div class="main-content__img" style="background-image: url('https://picsum.photos/seed/portada/900/500');"></div>
+        <p>Recorrimos durante siete noches los bares, teatros y peñas que mantienen viva la cultura nocturna de la región. Lo que encontramos fue mucho más que entretenimiento: una red de artistas, trabajadores y vecinos que sostienen un ecosistema cultural propio.</p>
+        <p>Desde los escenarios under hasta las salas tradicionales, la noche se reinventa cada fin de semana con propuestas que mezclan música, gastronomía y arte visual. Esta es la crónica de una ciudad que late distinto cuando se apaga el sol.</p>
+        <a href="#" class="leer-mas">Leer la nota completa →</a>
+    </article>
+
+    <!-- REQ-1.4.6: cita destacada a ancho completo, rompe las 2 columnas -->
+    <blockquote class="quote">
+        "Una ciudad se mide por lo que ofrece cuando nadie está mirando."
+    </blockquote>
+
+    <!-- auto-fit vs auto-fill: ambos crean tantas columnas como entren según el
+         minmax. La diferencia está cuando sobra espacio: auto-FILL deja columnas
+         vacías reservadas (fantasmas) y los items conservan su ancho mínimo;
+         auto-FIT colapsa esas columnas vacías y estira los items existentes para
+         ocupar todo el ancho disponible. -->
+    <section class="cards">
+
+        <!-- REQ-1.4.10 / REQ-1.4.B3: featured card que ocupa 2 columnas -->
+        <article class="card card--ancha">
+            <div class="card__img" style="background-image: url('https://picsum.photos/seed/c0/600/300');"></div>
+            <div class="card__body">
+                <span class="card__tag">Destacado</span>
+                <h2 class="card__titulo">El mapa secreto de los murales de la ciudad</h2>
+                <p class="card__fecha">27 de junio de 2026</p>
+                <p class="card__extracto">Un recorrido fotográfico por las paredes que se convirtieron en galerías a cielo abierto.</p>
+                <a href="#" class="leer-mas">Leer más →</a>
+            </div>
+        </article>
+
+        <!-- REQ-1.4.8 / REQ-1.4.9: mínimo 6 tarjetas con contenido distinto -->
+        <article class="card">
+            <div class="card__img" style="background-image: url('https://picsum.photos/seed/c1/400/250');"></div>
+            <div class="card__body">
+                <span class="card__tag">Cultura</span>
+                <h2 class="card__titulo">El regreso del cine analógico</h2>
+                <p class="card__fecha">26 de junio de 2026</p>
+                <p class="card__extracto">Por qué una nueva generación está volviendo al rollo de 35mm.</p>
+                <a href="#" class="leer-mas">Leer más →</a>
+            </div>
+        </article>
+
+        <article class="card">
+            <div class="card__img" style="background-image: url('https://picsum.photos/seed/c2/400/250');"></div>
+            <div class="card__body">
+                <span class="card__tag">Gastronomía</span>
+                <h2 class="card__titulo">Las panaderías de masa madre que hay que probar</h2>
+                <p class="card__fecha">25 de junio de 2026</p>
+                <p class="card__extracto">Un mapa para los amantes del pan de fermentación lenta.</p>
+                <a href="#" class="leer-mas">Leer más →</a>
+            </div>
+        </article>
+
+        <article class="card">
+            <div class="card__img" style="background-image: url('https://picsum.photos/seed/c3/400/250');"></div>
+            <div class="card__body">
+                <span class="card__tag">Música</span>
+                <h2 class="card__titulo">La nueva escena del jazz local</h2>
+                <p class="card__fecha">24 de junio de 2026</p>
+                <p class="card__extracto">Entrevistamos a los músicos que reinventan el género desde el under.</p>
+                <a href="#" class="leer-mas">Leer más →</a>
+            </div>
+        </article>
+
+        <article class="card">
+            <div class="card__img" style="background-image: url('https://picsum.photos/seed/c4/400/250');"></div>
+            <div class="card__body">
+                <span class="card__tag">Ciudad</span>
+                <h2 class="card__titulo">Diez plazas para perderse un domingo</h2>
+                <p class="card__fecha">23 de junio de 2026</p>
+                <p class="card__extracto">Espacios verdes para desconectar sin salir del casco urbano.</p>
+                <a href="#" class="leer-mas">Leer más →</a>
+            </div>
+        </article>
+
+        <article class="card">
+            <div class="card__img" style="background-image: url('https://picsum.photos/seed/c5/400/250');"></div>
+            <div class="card__body">
+                <span class="card__tag">Libros</span>
+                <h2 class="card__titulo">Guía de librerías independientes</h2>
+                <p class="card__fecha">22 de junio de 2026</p>
+                <p class="card__extracto">Los rincones donde todavía se respira papel y tinta.</p>
+                <a href="#" class="leer-mas">Leer más →</a>
+            </div>
+        </article>
+
+        <article class="card">
+            <div class="card__img" style="background-image: url('https://picsum.photos/seed/c6/400/250');"></div>
+            <div class="card__body">
+                <span class="card__tag">Teatro</span>
+                <h2 class="card__titulo">La cartelera off que nadie te recomienda</h2>
+                <p class="card__fecha">21 de junio de 2026</p>
+                <p class="card__extracto">Obras experimentales que se ven en salas de menos de cincuenta butacas.</p>
+                <a href="#" class="leer-mas">Leer más →</a>
+            </div>
+        </article>
+
+    </section>
+
+    <footer class="footer">
+        <p>© 2026 Revista Norte. Magazine digital maquetado con CSS Grid.</p>
+        <nav class="footer__nav">
+            <a href="#">Quiénes somos</a>
+            <a href="#">Anunciar</a>
+            <a href="#">Contacto</a>
+        </nav>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,415 @@
+/* TP-CHECK: 1.4 | MASCENA-ENZO-MARIO | grid-template-areas hace: permite nombrar regiones de la grilla con palabras y dibujar el layout como un mapa de texto, asignando luego cada elemento a un área con grid-area; así el orden visual queda separado del orden del HTML. */
+
+/* REQ-1.4.12: sistema de colores con variables CSS */
+:root {
+    --color-primario: #b3242b;
+    --color-fondo: #faf8f5;
+    --color-texto: #1d1b1a;
+    --color-tarjeta: #ffffff;
+    --color-borde: #e7e2db;
+    --color-suave: #6b6560;
+    --sombra: 0 4px 14px rgba(29, 27, 26, 0.08);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', serif;
+    line-height: 1.6;
+    color: var(--color-texto);
+    background-color: var(--color-fondo);
+
+    /* REQ-1.4.1: grid principal de la página con áreas nombradas */
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    /* REQ-1.4.4: el artículo (main-content) ocupa 2 filas usando el área */
+    grid-template-areas:
+        "header        header"
+        "main-content  sidebar"
+        "main-content  sidebar"
+        "quote         quote"
+        "cards         cards"
+        "footer        footer";
+    /* REQ-1.4.5: separación uniforme con gap, sin margins en los hijos */
+    gap: 28px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px 40px;
+}
+
+/* ===== HEADER ===== */
+/* REQ-1.4.2: header con Flexbox y sticky */
+.header {
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+    background-color: var(--color-tarjeta);
+    border-bottom: 3px solid var(--color-primario);
+    box-shadow: var(--sombra);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    /* anulamos el gap lateral del body para que el header pegue a los bordes */
+    margin: 0 -24px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: -0.5px;
+    text-decoration: none;
+    color: var(--color-texto);
+}
+
+.logo span {
+    color: var(--color-primario);
+}
+
+.nav {
+    display: flex;
+    gap: 26px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: var(--color-texto);
+    font-family: Arial, sans-serif;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+}
+
+.nav a:hover {
+    color: var(--color-primario);
+}
+
+/* ===== ARTÍCULO PRINCIPAL ===== */
+/* REQ-1.4.3: el article va en el área main-content (columna 2fr) */
+.main-content {
+    grid-area: main-content;
+    background-color: var(--color-tarjeta);
+    border: 1px solid var(--color-borde);
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: var(--sombra);
+}
+
+.categoria {
+    display: inline-block;
+    background-color: var(--color-primario);
+    color: #fff;
+    font-family: Arial, sans-serif;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 4px 12px;
+    border-radius: 4px;
+}
+
+.main-content h1 {
+    font-size: 2.2rem;
+    line-height: 1.2;
+    margin: 14px 0 8px;
+}
+
+.meta {
+    color: var(--color-suave);
+    font-style: italic;
+    font-size: 0.95rem;
+    margin: 0 0 20px;
+}
+
+.main-content__img {
+    height: 340px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.leer-mas {
+    display: inline-block;
+    margin-top: 8px;
+    color: var(--color-primario);
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.leer-mas:hover {
+    text-decoration: underline;
+}
+
+/* ===== SIDEBAR ===== */
+/* REQ-1.4.13: artículos recientes, newsletter y redes */
+.sidebar {
+    grid-area: sidebar;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.widget {
+    background-color: var(--color-tarjeta);
+    border: 1px solid var(--color-borde);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: var(--sombra);
+}
+
+.widget h3 {
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid var(--color-primario);
+    padding-bottom: 8px;
+    margin: 0 0 14px;
+}
+
+.recientes,
+.redes {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.recientes li {
+    padding: 8px 0;
+    border-bottom: 1px solid var(--color-borde);
+}
+
+.recientes li:last-child {
+    border-bottom: none;
+}
+
+.recientes a,
+.redes a {
+    text-decoration: none;
+    color: var(--color-texto);
+    font-size: 0.95rem;
+    transition: color 0.2s;
+}
+
+.recientes a:hover,
+.redes a:hover {
+    color: var(--color-primario);
+}
+
+.redes li {
+    padding: 6px 0;
+}
+
+.widget__texto {
+    font-size: 0.9rem;
+    color: var(--color-suave);
+    margin: 0 0 12px;
+}
+
+/* Newsletter: micro-layout con Flexbox */
+.newsletter {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.newsletter input {
+    padding: 10px;
+    border: 1px solid var(--color-borde);
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-family: Arial, sans-serif;
+}
+
+.newsletter button {
+    padding: 10px;
+    background-color: var(--color-primario);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.newsletter button:hover {
+    background-color: #8e1c22;
+}
+
+/* clase utilitaria para esconder labels visualmente sin perder accesibilidad */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* ===== PULL QUOTE ===== */
+/* REQ-1.4.6: ocupa el ancho completo, rompe las 2 columnas */
+.quote {
+    grid-area: quote;
+    /* además del área, lo forzamos explícitamente de borde a borde */
+    grid-column: 1 / -1;
+    margin: 0;
+    padding: 40px;
+    background-color: var(--color-primario);
+    color: #fff;
+    font-size: 1.8rem;
+    font-style: italic;
+    text-align: center;
+    border-radius: 10px;
+}
+
+/* ===== GALERÍA DE TARJETAS ===== */
+.cards {
+    grid-area: cards;
+    display: grid;
+    /* REQ-1.4.7: columnas que se adaptan solas, sin media queries */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* REQ-1.4.B2: dense rellena los huecos que deja la tarjeta ancha */
+    grid-auto-flow: dense;
+    gap: 24px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-tarjeta);
+    border: 1px solid var(--color-borde);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--sombra);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(29, 27, 26, 0.15);
+}
+
+/* REQ-1.4.10 / REQ-1.4.B3: la tarjeta destacada ocupa 2 columnas */
+.card--ancha {
+    grid-column: span 2;
+}
+
+.card__img {
+    height: 170px;
+    background-size: cover;
+    background-position: center;
+    background-color: var(--color-borde);
+}
+
+.card__body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 18px;
+}
+
+.card__tag {
+    align-self: flex-start;
+    background-color: var(--color-fondo);
+    color: var(--color-primario);
+    font-family: Arial, sans-serif;
+    font-size: 0.72rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 3px 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.card__titulo {
+    font-size: 1.15rem;
+    line-height: 1.25;
+    margin: 0 0 6px;
+}
+
+.card__fecha {
+    font-family: Arial, sans-serif;
+    font-size: 0.8rem;
+    color: var(--color-suave);
+    margin: 0 0 10px;
+}
+
+.card__extracto {
+    font-size: 0.95rem;
+    margin: 0 0 14px;
+}
+
+.card__body .leer-mas {
+    margin-top: auto;
+    align-self: flex-start;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    grid-area: footer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 24px;
+    background-color: var(--color-texto);
+    color: #fff;
+    border-radius: 10px;
+}
+
+.footer p {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    font-size: 0.9rem;
+}
+
+.footer__nav {
+    display: flex;
+    gap: 20px;
+}
+
+.footer__nav a {
+    color: #fff;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 0.9rem;
+}
+
+.footer__nav a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive: en pantallas chicas el grid pasa a una sola columna.
+   (Permitido: la restricción de "sin media queries" es solo para el
+   grid de tarjetas, que sigue usando auto-fit + minmax.) */
+@media (max-width: 760px) {
+    body {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "main-content"
+            "sidebar"
+            "quote"
+            "cards"
+            "footer";
+    }
+
+    .card--ancha {
+        grid-column: span 1;
+    }
+
+    .quote {
+        font-size: 1.4rem;
+        padding: 28px;
+    }
+}
