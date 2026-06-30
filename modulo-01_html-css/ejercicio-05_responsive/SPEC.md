@@ -80,31 +80,31 @@ La agencia te pide que tomes el layout del magazine del ejercicio 1.4 y lo hagas
 
 **Estrategia Mobile First**
 
-- [ ] **REQ-1.5.1** Los estilos base (sin media query) son para **mobile** — una sola columna, nav colapsado, tipografía legible sin zoom
-- [ ] **REQ-1.5.2** Las media queries usan `min-width` (mobile-first) — no `max-width`
-- [ ] **REQ-1.5.3** Hay exactamente 3 breakpoints: `640px` (tablet vertical), `1024px` (tablet horizontal/desktop chico), y un breakpoint libre para desktop grande (>1200px opcional)
+- [x] **REQ-1.5.1** Los estilos base (sin media query) son para **mobile** — una sola columna, nav colapsado, tipografía legible sin zoom
+- [x] **REQ-1.5.2** Las media queries usan `min-width` (mobile-first) — no `max-width`
+- [x] **REQ-1.5.3** Hay exactamente 3 breakpoints: `640px` (tablet vertical), `1024px` (tablet horizontal/desktop chico), y un breakpoint libre para desktop grande (>1200px opcional)
 
 **Navegación responsive**
 
-- [ ] **REQ-1.5.4** En mobile (< 640px), el nav se oculta y aparece un botón de menú hamburguesa (☰) que al hacer click (con checkbox o JS mínimo) muestra/oculta la navegación
-- [ ] **REQ-1.5.5** En tablet (640px+), el menú hamburguesa desaparece y el nav se muestra como lista vertical o en línea
-- [ ] **REQ-1.5.6** En desktop (1024px+), el nav es horizontal con todos los enlaces visibles
+- [x] **REQ-1.5.4** En mobile (< 640px), el nav se oculta y aparece un botón de menú hamburguesa (☰) que al hacer click (con checkbox o JS mínimo) muestra/oculta la navegación
+- [x] **REQ-1.5.5** En tablet (640px+), el menú hamburguesa desaparece y el nav se muestra como lista vertical o en línea
+- [x] **REQ-1.5.6** En desktop (1024px+), el nav es horizontal con todos los enlaces visibles
 
 **Layout adaptable**
 
-- [ ] **REQ-1.5.7** El layout de 2 columnas (artículo + sidebar) solo aparece a partir de `1024px` — antes de eso, todo es una columna
-- [ ] **REQ-1.5.8** La galería de tarjetas cambia de columnas según el ancho: 1 columna en mobile, 2-3 en tablet, 4+ en desktop (usando `auto-fit` + `minmax` del ejercicio 1.4, complementado con media queries si es necesario)
-- [ ] **REQ-1.5.9** Las imágenes son responsive: usan `max-width: 100%` y `height: auto` para escalar dentro de su contenedor
+- [x] **REQ-1.5.7** El layout de 2 columnas (artículo + sidebar) solo aparece a partir de `1024px` — antes de eso, todo es una columna
+- [x] **REQ-1.5.8** La galería de tarjetas cambia de columnas según el ancho: 1 columna en mobile, 2-3 en tablet, 4+ en desktop (usando `auto-fit` + `minmax` del ejercicio 1.4, complementado con media queries si es necesario)
+- [x] **REQ-1.5.9** Las imágenes son responsive: usan `max-width: 100%` y `height: auto` para escalar dentro de su contenedor
 
 **Tipografía responsive**
 
-- [ ] **REQ-1.5.10** Los tamaños de fuente cambian según el viewport: al menos 2 tamaños diferentes para `h1` entre mobile y desktop (ej: `24px` mobile → `48px` desktop)
-- [ ] **REQ-1.5.11** El interlineado (`line-height`) en párrafos es mayor en mobile (`1.6`) que en desktop (`1.5`) para mejorar legibilidad en pantallas chicas
-- [ ] **REQ-1.5.12** El contenedor de texto tiene un `max-width` en desktop para evitar líneas de más de 70 caracteres (~ `65ch`)
+- [x] **REQ-1.5.10** Los tamaños de fuente cambian según el viewport: al menos 2 tamaños diferentes para `h1` entre mobile y desktop (ej: `24px` mobile → `48px` desktop)
+- [x] **REQ-1.5.11** El interlineado (`line-height`) en párrafos es mayor en mobile (`1.6`) que en desktop (`1.5`) para mejorar legibilidad en pantallas chicas
+- [x] **REQ-1.5.12** El contenedor de texto tiene un `max-width` en desktop para evitar líneas de más de 70 caracteres (~ `65ch`)
 
 **Hamburger menu sin JS (obligatorio)**
 
-- [ ] **REQ-1.5.13** El menú hamburguesa funciona con un checkbox oculto + label + selector `:checked` en CSS — cero JavaScript para el toggle del menú. La estructura debe ser:
+- [x] **REQ-1.5.13** El menú hamburguesa funciona con un checkbox oculto + label + selector `:checked` en CSS — cero JavaScript para el toggle del menú. La estructura debe ser:
 
 ```html
 <input type="checkbox" id="menu-toggle" class="menu-toggle" hidden>
@@ -123,13 +123,13 @@ Y el CSS:
 
 **Contenido de la página**
 
-- [ ] **REQ-1.5.14** La página tiene: header con nav, artículo principal con al menos 2 secciones, sidebar con contenido, pull quote, galería de tarjetas (mínimo 6), footer
-- [ ] **REQ-1.5.15** Todo el contenido es coherente y está en español
+- [x] **REQ-1.5.14** La página tiene: header con nav, artículo principal con al menos 2 secciones, sidebar con contenido, pull quote, galería de tarjetas (mínimo 6), footer
+- [x] **REQ-1.5.15** Todo el contenido es coherente y está en español
 
 ### Criterios opcionales (bonus)
 
 - [ ] **REQ-1.5.B1** Implementar imágenes con `srcset` y `<picture>` para servir diferentes resoluciones según el viewport
-- [ ] **REQ-1.5.B2** Usar `clamp()` para la tipografía fluida en lugar de media queries: `font-size: clamp(1rem, 2.5vw, 2rem);`
+- [x] **REQ-1.5.B2** Usar `clamp()` para la tipografía fluida en lugar de media queries: `font-size: clamp(1rem, 2.5vw, 2rem);`
 - [ ] **REQ-1.5.B3** Usar `@container` (Container Queries) para que las tarjetas se adapten al ancho de su contenedor, no al viewport
 
 ---
