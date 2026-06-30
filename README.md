@@ -21,6 +21,16 @@ Este repositorio es tu **Trabajo Práctico Individual (TPI)** de la materia. Con
 
 ---
 
+## 📋 Nota sobre el propósito del curso
+
+Este curso está diseñado exclusivamente para aquellos estudiantes que deseen adquirir competencia en desarrollo frontend con **HTML, CSS y JavaScript** con el objetivo de mejorar su perfil profesional. No constituye una obligación académica, no tiene fecha de entrega ni vencimiento, y su ritmo de avance es determinado únicamente por cada estudiante en función de su disponibilidad y dedicación.
+
+El material se encuentra estructurado de forma progresiva y acumulativa: cada ejercicio introduce un concepto nuevo y presupone el dominio de los conceptos anteriores. Se recomienda completar los ejercicios en orden secuencial y realizar los proyectos prácticos propuestos (🎯 Proyecto para hacer solo) antes de avanzar al siguiente módulo.
+
+La meta no es "terminar el curso", sino desarrollar la capacidad de construir interfaces web de forma autónoma, comprendiendo los fundamentos y las decisiones de diseño detrás de cada herramienta.
+
+---
+
 ## 🚀 Cómo empezar
 
 ### 1. Hacé un fork de este repositorio
