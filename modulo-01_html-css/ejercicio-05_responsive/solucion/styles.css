@@ -1,0 +1,456 @@
+/* TP-CHECK: 1.5 | MASCENA-ENZO-MARIO | mobile-first significa: escribir primero los estilos para pantallas chicas y después ir agregando mejoras para pantallas grandes con media queries de min-width, en vez de empezar por el desktop y achicar. */
+
+/* Base tomada del ejercicio 1.4 (magazine con CSS Grid) y mejorada para que sea responsive mobile-first. */
+
+:root {
+    --color-primario: #b3242b;
+    --color-fondo: #faf8f5;
+    --color-texto: #1d1b1a;
+    --color-tarjeta: #ffffff;
+    --color-borde: #e7e2db;
+    --color-suave: #6b6560;
+    --sombra: 0 4px 14px rgba(29, 27, 26, 0.08);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', serif;
+    line-height: 1.6;
+    color: var(--color-texto);
+    background-color: var(--color-fondo);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ===== Header y menú ===== */
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 18px;
+    background-color: var(--color-tarjeta);
+    border-bottom: 3px solid var(--color-primario);
+    box-shadow: var(--sombra);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--color-texto);
+}
+
+.logo span {
+    color: var(--color-primario);
+}
+
+.menu-icon {
+    font-size: 1.6rem;
+    cursor: pointer;
+    user-select: none;
+    line-height: 1;
+}
+
+.nav-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    gap: 4px;
+    margin-top: 12px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--color-texto);
+    font-family: Arial, sans-serif;
+    padding: 10px 4px;
+    border-bottom: 1px solid var(--color-borde);
+}
+
+.nav-menu a:hover {
+    color: var(--color-primario);
+}
+
+.menu-toggle:checked ~ .nav-menu {
+    display: flex;
+}
+
+/* ===== Layout general (mobile: una columna) ===== */
+.layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 24px 18px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ===== Artículo principal ===== */
+.main-content {
+    background-color: var(--color-tarjeta);
+    border: 1px solid var(--color-borde);
+    border-radius: 10px;
+    padding: 22px;
+    box-shadow: var(--sombra);
+    max-width: 65ch;
+}
+
+.categoria {
+    display: inline-block;
+    background-color: var(--color-primario);
+    color: #fff;
+    font-family: Arial, sans-serif;
+    font-size: 0.72rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 4px 12px;
+    border-radius: 4px;
+}
+
+.main-content h1 {
+    font-size: clamp(1.6rem, 5vw, 2.9rem);
+    line-height: 1.2;
+    margin: 14px 0 8px;
+}
+
+.main-content h2 {
+    font-size: 1.3rem;
+    margin: 20px 0 8px;
+}
+
+.meta {
+    color: var(--color-suave);
+    font-style: italic;
+    font-size: 0.95rem;
+    margin: 0 0 18px;
+}
+
+.main-content__img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+
+.leer-mas {
+    display: inline-block;
+    margin-top: 8px;
+    color: var(--color-primario);
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.leer-mas:hover {
+    text-decoration: underline;
+}
+
+/* ===== Sidebar ===== */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.widget {
+    background-color: var(--color-tarjeta);
+    border: 1px solid var(--color-borde);
+    border-radius: 10px;
+    padding: 18px;
+    box-shadow: var(--sombra);
+}
+
+.widget h3 {
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid var(--color-primario);
+    padding-bottom: 8px;
+    margin: 0 0 14px;
+}
+
+.recientes,
+.redes {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.recientes li {
+    padding: 8px 0;
+    border-bottom: 1px solid var(--color-borde);
+}
+
+.recientes li:last-child {
+    border-bottom: none;
+}
+
+.recientes a,
+.redes a {
+    text-decoration: none;
+    color: var(--color-texto);
+    font-size: 0.95rem;
+}
+
+.recientes a:hover,
+.redes a:hover {
+    color: var(--color-primario);
+}
+
+.redes li {
+    padding: 6px 0;
+}
+
+.widget__texto {
+    font-size: 0.9rem;
+    color: var(--color-suave);
+    margin: 0 0 12px;
+}
+
+.newsletter {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.newsletter input {
+    padding: 10px;
+    border: 1px solid var(--color-borde);
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: Arial, sans-serif;
+}
+
+.newsletter button {
+    padding: 10px;
+    background-color: var(--color-primario);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.newsletter button:hover {
+    background-color: #8e1c22;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* ===== Cita destacada ===== */
+.quote {
+    margin: 0;
+    padding: 28px 22px;
+    background-color: var(--color-primario);
+    color: #fff;
+    font-size: clamp(1.2rem, 4vw, 1.8rem);
+    font-style: italic;
+    text-align: center;
+    border-radius: 10px;
+}
+
+/* ===== Galería de tarjetas ===== */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-tarjeta);
+    border: 1px solid var(--color-borde);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--sombra);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(29, 27, 26, 0.15);
+}
+
+.card__img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+}
+
+.card__body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 16px;
+}
+
+.card__tag {
+    align-self: flex-start;
+    background-color: var(--color-fondo);
+    color: var(--color-primario);
+    font-family: Arial, sans-serif;
+    font-size: 0.72rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 3px 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.card__titulo {
+    font-size: 1.1rem;
+    line-height: 1.25;
+    margin: 0 0 6px;
+}
+
+.card__fecha {
+    font-family: Arial, sans-serif;
+    font-size: 0.8rem;
+    color: var(--color-suave);
+    margin: 0 0 10px;
+}
+
+.card__extracto {
+    font-size: 0.95rem;
+    margin: 0 0 14px;
+}
+
+.card__body .leer-mas {
+    margin-top: auto;
+    align-self: flex-start;
+}
+
+/* ===== Footer ===== */
+.footer {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 22px 18px;
+    background-color: var(--color-texto);
+    color: #fff;
+}
+
+.footer p {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    font-size: 0.9rem;
+}
+
+.footer__nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.footer__nav a {
+    color: #fff;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 0.9rem;
+}
+
+.footer__nav a:hover {
+    text-decoration: underline;
+}
+
+/* ===== Tablet (≥ 640px): nav en línea y footer en fila ===== */
+@media (min-width: 640px) {
+    .menu-icon {
+        display: none;
+    }
+
+    .nav-menu {
+        display: flex;
+        flex-direction: row;
+        width: auto;
+        gap: 24px;
+        margin-top: 0;
+    }
+
+    .nav-menu a {
+        border-bottom: none;
+        padding: 4px;
+    }
+
+    .main-content {
+        max-width: none;
+    }
+
+    .footer {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 24px 32px;
+    }
+}
+
+/* ===== Desktop (≥ 1024px): dos columnas artículo + sidebar (como en el 1.4) ===== */
+@media (min-width: 1024px) {
+    body {
+        line-height: 1.5;
+    }
+
+    .layout {
+        grid-template-columns: 2fr 1fr;
+        grid-template-areas:
+            "main-content sidebar"
+            "quote        quote"
+            "cards        cards";
+        gap: 30px;
+        padding: 32px 24px;
+    }
+
+    .main-content {
+        grid-area: main-content;
+        max-width: 72ch;
+    }
+
+    .sidebar {
+        grid-area: sidebar;
+    }
+
+    .quote {
+        grid-area: quote;
+        padding: 40px;
+    }
+
+    .cards {
+        grid-area: cards;
+    }
+}
+
+/* ===== Desktop grande (≥ 1280px) ===== */
+@media (min-width: 1280px) {
+    .layout {
+        gap: 40px;
+    }
+
+    .cards {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+}

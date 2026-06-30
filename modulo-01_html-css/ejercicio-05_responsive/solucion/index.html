@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revista Norte — Magazine Responsive</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="header">
+        <a href="#" class="logo">Revista<span>Norte</span></a>
+
+        <!-- El menú funciona sin JS porque: el checkbox guarda el estado abierto/cerrado y el selector .menu-toggle:checked ~ .nav-menu muestra el nav cuando está marcado. -->
+        <input type="checkbox" id="menu-toggle" class="menu-toggle" hidden>
+        <label for="menu-toggle" class="menu-icon" aria-label="Abrir menú">☰</label>
+
+        <nav class="nav-menu">
+            <a href="#inicio">Inicio</a>
+            <a href="#magazine">Magazine</a>
+            <a href="#cultura">Cultura</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <main class="layout">
+
+        <article class="main-content">
+            <span class="categoria">Portada</span>
+            <h1>La ciudad que no duerme: una semana en la vida nocturna del Norte</h1>
+            <p class="meta">Por Enzo Mascena · 28 de junio de 2026</p>
+
+            <img class="main-content__img"
+                 src="https://picsum.photos/seed/portada/900/500"
+                 alt="Vista nocturna de la ciudad iluminada">
+
+            <section>
+                <h2>Una red que sostiene la noche</h2>
+                <p>Recorrimos durante siete noches los bares, teatros y peñas que mantienen viva la cultura nocturna de la región. Lo que encontramos fue mucho más que entretenimiento: una red de artistas, trabajadores y vecinos que sostienen un ecosistema cultural propio.</p>
+            </section>
+
+            <section>
+                <h2>La noche se reinventa</h2>
+                <p>Desde los escenarios under hasta las salas tradicionales, la noche se reinventa cada fin de semana con propuestas que mezclan música, gastronomía y arte visual. Esta es la crónica de una ciudad que late distinto cuando se apaga el sol.</p>
+                <a href="#" class="leer-mas">Leer la nota completa →</a>
+            </section>
+        </article>
+
+        <aside class="sidebar">
+            <section class="widget">
+                <h3>Artículos recientes</h3>
+                <ul class="recientes">
+                    <li><a href="#">El regreso del cine analógico</a></li>
+                    <li><a href="#">Diez plazas para perderse en la ciudad</a></li>
+                    <li><a href="#">Entrevista: la nueva escena del jazz local</a></li>
+                    <li><a href="#">Guía de librerías independientes</a></li>
+                </ul>
+            </section>
+
+            <section class="widget">
+                <h3>Newsletter</h3>
+                <p class="widget__texto">Recibí lo mejor de la semana en tu correo.</p>
+                <form class="newsletter">
+                    <label for="email" class="sr-only">Email</label>
+                    <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+                    <button type="submit">Suscribirme</button>
+                </form>
+            </section>
+
+            <section class="widget">
+                <h3>Seguinos</h3>
+                <ul class="redes">
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Twitter / X</a></li>
+                    <li><a href="#">YouTube</a></li>
+                </ul>
+            </section>
+        </aside>
+
+        <blockquote class="quote">
+            "Una ciudad se mide por lo que ofrece cuando nadie está mirando."
+        </blockquote>
+
+        <section class="cards">
+
+            <article class="card">
+                <img class="card__img" src="https://picsum.photos/seed/c1/400/250" alt="Rollo de película analógica">
+                <div class="card__body">
+                    <span class="card__tag">Cultura</span>
+                    <h2 class="card__titulo">El regreso del cine analógico</h2>
+                    <p class="card__fecha">26 de junio de 2026</p>
+                    <p class="card__extracto">Por qué una nueva generación está volviendo al rollo de 35mm.</p>
+                    <a href="#" class="leer-mas">Leer más →</a>
+                </div>
+            </article>
+
+            <article class="card">
+                <img class="card__img" src="https://picsum.photos/seed/c2/400/250" alt="Pan de masa madre recién horneado">
+                <div class="card__body">
+                    <span class="card__tag">Gastronomía</span>
+                    <h2 class="card__titulo">Las panaderías de masa madre que hay que probar</h2>
+                    <p class="card__fecha">25 de junio de 2026</p>
+                    <p class="card__extracto">Un mapa para los amantes del pan de fermentación lenta.</p>
+                    <a href="#" class="leer-mas">Leer más →</a>
+                </div>
+            </article>
+
+            <article class="card">
+                <img class="card__img" src="https://picsum.photos/seed/c3/400/250" alt="Músico tocando un saxofón">
+                <div class="card__body">
+                    <span class="card__tag">Música</span>
+                    <h2 class="card__titulo">La nueva escena del jazz local</h2>
+                    <p class="card__fecha">24 de junio de 2026</p>
+                    <p class="card__extracto">Entrevistamos a los músicos que reinventan el género desde el under.</p>
+                    <a href="#" class="leer-mas">Leer más →</a>
+                </div>
+            </article>
+
+            <article class="card">
+                <img class="card__img" src="https://picsum.photos/seed/c4/400/250" alt="Plaza arbolada de la ciudad">
+                <div class="card__body">
+                    <span class="card__tag">Ciudad</span>
+                    <h2 class="card__titulo">Diez plazas para perderse un domingo</h2>
+                    <p class="card__fecha">23 de junio de 2026</p>
+                    <p class="card__extracto">Espacios verdes para desconectar sin salir del casco urbano.</p>
+                    <a href="#" class="leer-mas">Leer más →</a>
+                </div>
+            </article>
+
+            <article class="card">
+                <img class="card__img" src="https://picsum.photos/seed/c5/400/250" alt="Estantería de una librería">
+                <div class="card__body">
+                    <span class="card__tag">Libros</span>
+                    <h2 class="card__titulo">Guía de librerías independientes</h2>
+                    <p class="card__fecha">22 de junio de 2026</p>
+                    <p class="card__extracto">Los rincones donde todavía se respira papel y tinta.</p>
+                    <a href="#" class="leer-mas">Leer más →</a>
+                </div>
+            </article>
+
+            <article class="card">
+                <img class="card__img" src="https://picsum.photos/seed/c6/400/250" alt="Escenario de una sala de teatro">
+                <div class="card__body">
+                    <span class="card__tag">Teatro</span>
+                    <h2 class="card__titulo">La cartelera off que nadie te recomienda</h2>
+                    <p class="card__fecha">21 de junio de 2026</p>
+                    <p class="card__extracto">Obras experimentales que se ven en salas de menos de cincuenta butacas.</p>
+                    <a href="#" class="leer-mas">Leer más →</a>
+                </div>
+            </article>
+
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 Revista Norte. Magazine digital responsive, mobile-first.</p>
+        <nav class="footer__nav">
+            <a href="#">Quiénes somos</a>
+            <a href="#">Anunciar</a>
+            <a href="#">Contacto</a>
+        </nav>
+    </footer>
+
+</body>
+</html>
